@@ -80,16 +80,12 @@ router.post('/subscribe',async(req,res)=>{
     });
     try {
         const savedetail = subdetail.save();
-        try {
-            res.render('/',{success:'You subscribed to our Blog'});
-        } catch (error) {
-            console.log(error)
-        }
+        res.redirect('/')
     } catch (error) {
         console.log(error);
     }
     
-})
+});
 
 
 module.exports = router;
